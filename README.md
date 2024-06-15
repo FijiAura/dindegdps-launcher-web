@@ -7,5 +7,5 @@ On the next DindeGDPS release, other languages will be supported too! The goal o
 
 ## Roadmap
 
-[ ] Upload Files
-[ ] Translate in French and Russian
+- [ ] Upload Files
+- [ ] Translate in French and Russian
