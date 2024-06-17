@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+  <link href='../css/boxicons.min.css' rel='stylesheet'>
+  <link href='../css/quoicoubeh.css' rel='stylesheet'>
+  <style>
+    #title {
+      font-family: Librestile;
+    }
+    a{color:darkcyan}
+    body {   
+      opacity: 0;
+      transition: opacity .5s;   
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,50,1) 90%, rgba(0,0,0,1) 100%);
+      color: cornflowerblue;
+      font-family: Octarine;
+      overflow: hidden;
+      margin: 10vh;
+    }
+    #footer {
+      font-size: 24px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin-bottom: 6vh;
+    }
+    #f2 {
+      font-size: 48px;
+    }
+  </style>
+  <script src="../js/trans.js"></script>
+</head>
+<body>
+  <center>
+    <h1>Welcome to <span id="title">DindeGDPS</span></h1>
+    <h4>
+      Dedicated to :<br />
+      KryzerYT<br />
+      🎵 => <a href='https://soundcloud.com/rareized' target='_blank'>Rare</a>, <a href='https://dmdokuro.bandcamp.com/' target='_blank'>DM DOKURO</a> & <a href='https://soundcloud.com/juora' target='_blank'>Juora</a><br />
+      The active DindeGDPS players <3<br />
+      AlexEEZ, Efe and co...<br />
+      MegaSa1nt (gdps core)<br>
+      #PlayerPleaseComeBack
+    </h4>
+    <div id="f2">
+      <a href="javascript:window.chrome.webview.postMessage('ext://dimisaio.be/discord')"><i class='bx bxl-discord-alt'></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://youtube.com/@dimisaio')"><i class='bx bxl-youtube' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://twitter.com/dimisaio')"><i class='bx bxl-twitter' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://dgdps.us.to/wa')"><i class='bx bxl-whatsapp' ></i></a>&nbsp;<a href="javascript:transitionToPage('more.html')"><i class='bx bx-folder-plus'></i></a>
+    </div>
+    <div id="footer">
+      <a href="https://dindegmdps.us.to">Tools</a> | <a href="https://browse.141412.xyz" target="_blank" rel="noreferrer noopenner">Browser</a> | <a href="javascript:transitionToPage('settings.html')">Settings</a> | <a href="javascript:transitionToPage('credits.html')">Credits</a>
+    </div>
+  </center>
+  <script>
+        window.chrome.webview.postMessage("SetColor");
+  </script>
+</body>
+</html>

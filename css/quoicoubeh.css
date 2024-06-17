@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Librestile;
+    src: url("../fonts/LibrestileExtBold.ttf");
+}
+@font-face {
+    font-family: Octarine;
+    src: url("../fonts/Octarine-Light.otf");
+}
+
+a {
+    transition: 0.3s ease;
+}
+a:hover {
+    filter: brightness(1.5);
+}
+
+body {
+    font-family: Octarine;
+}

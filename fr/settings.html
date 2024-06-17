@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+<link rel="stylesheet" href="../css/quoicoubeh.css">
+<style>
+    #updates {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: Octarine;
+        font-size: 14px;
+    }
+    input[type=checkbox] {
+        vertical-align: middle;
+        position: relative;
+        bottom: 1px;
+    }
+    a {
+        color: rgb(18, 177, 230);
+    }
+    body, html {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: Octarine;
+    }
+    body {
+        background-color: rgba(0,0,21,1);
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+    .left-div {
+        padding-top: 2%;
+        padding-left: 2.5%;
+        line-height: 1.8;
+        width: 20%;
+        /* background-color: rgb(17, 17, 17); /* Specify your desired background color */
+        background-color: #000005;
+
+    }
+    .right-div {
+        flex: 1;
+        padding-top: 4%;
+        padding-left: 2%;
+        background-color: #000015; /* Specify your desired background color */
+    }
+    button, select, input, input::placeholder {
+        color: rgb(18, 177, 230);
+        background-color: black;
+    }
+</style>
+<script src="../js/trans.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-div">
+            <a href="javascript:void(0)" onclick="load('updates')">MÀJ</a><br>
+            <a href="javascript:void(0)" onclick="load('gdps')">GDPS</a><br>
+            <a href="javascript:void(0)" onclick="load('launcher')">Launcher</a>
+        </div>
+        <div class="right-div">
+            <div id="updates">
+                <input type="checkbox" id="cupdates" onclick="applyupdcheck()">Vérifier automatiquement les MÀJ</input>
+                <br><br>
+                <span style="padding-left: 6px;">Canal de MÀJ:</span>
+                <select onchange="applyupdcheck()" name="Canal de MAJ" id="uchannel" size="1">
+                    <option value="Stable">Release</option>
+                    <option value="Beta">Beta (INSTABLE)</option>
+                </select>
+            </div>
+
+            <div id="gdps">
+                <input type="text" placeholder="menuLoop customisé" id="mlurl">&nbsp;<button onclick="music()">Ok</button><br><br>
+                <a href="https://cdn.141412.xyz/menuloops/" target="_blank" rel="noreferrer noopenner">MenuLoop DB</a><br><br>
+                <a href="https://github.com/masckmaster2007/GDVCQI/releases/download/v1/GDVCQI.exe" download><button>Dépendances Manquantes?</button></a>&nbsp;<button onclick="cgdps()">GDPS Custom</button>&nbsp;&nbsp;<a href="https://gallery.dgdps.us.to/?client">Gallerie</a>            
+            </div>
+
+            <div id="launcher">
+                <input type="text" id="color" placeholder="Couleur (ex: Yellow)"> <button onclick="quoicouSend('color://' + document.getElementById('color').value)">Appliquer</button><br><br>
+                <button onclick="quoicouSend('GoSimple')">Activer le mode Simple</button><br><br>
+                <button onclick="sreset()">Réinitialiser les réglages</button><br><br>
+                <input type="checkbox" name="Fermer le launcher" id="clauncher" onclick="applycloselauncher()">Fermer le launcher sur appui de "Play"</input>
+            </div>
+        </div>
+    </div>
+    <script src="../js/libdinde-fr.js"></script>
+</body>
+</html>
