@@ -1,4 +1,7 @@
 # DindeGDPS - Web Folder
+> [!IMPORTANT]  
+> Code will be updated, DO NOT TRANSLATE YET
+
 On DindeGDPS' default mode, there is a "browser" that serves as a welcome screen. It contains socials, settings and credits.
 
 On the next DindeGDPS release, other languages will be supported too! The goal of this repo is to let people translate this browser in their own language!
@@ -11,7 +14,7 @@ On the next DindeGDPS release, other languages will be supported too! The goal o
 - [x] Translate in French
 - [ ] Translate in Russian
 
-## Translate.txt
+## ~~Translate.txt~~
 
 ```
 en/index.html:
