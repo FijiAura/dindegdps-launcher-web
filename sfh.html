@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menuloop DB</title>
+    <script src="./js/libdinde-locale.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }
+        a {
+            color: limegreen;
+            transition: 0.25s ease-in-out;
+        }
+        a:hover {
+            color: lime;
+        }
+        h1, a {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: flex; align-items: center; justify-content: center;">Powered by&nbsp;<a href="https://songfilehub.com/home" target="_blank" rel="noreferrer noopenner">SFH</a></h1><p>(CTRL-F 🔎)</p><a href="javascript:history.back()"><<<</a>
+    <hr>
+    <script>
+        // Create an object to map language codes to language arrays
+        var languages = {
+            en: en,
+            fr: fr,
+            ru: ru,
+            nl: nl
+        };
+
+        var phr = languages[navigator.userAgent.split("-")[1]];
+        fetch("https://api.songfilehub.com/v2/songs?songID=menuLoop").then((response) => response.json()).then(data => {
+            data.forEach((element) => {
+                // debug stuff => console.log(`Name: ${element["name"]}\nSongName: ${element["songName"]}\nURL: ${element["downloadUrl"]}`);
+                var z = document.createElement('p');
+                z.innerHTML = `${element["songName"]}<br><br><a href="javascript:copy('${element["downloadUrl"]}')">${phr.copyExit}</a><br><hr>`;
+                document.body.appendChild(z);
+            });
+        });
+        function copy(tesla) {
+            // Copy to clipboard? Ew! Use GET params? YEAH!
+            var lang = window.location.search.replace("?", "");
+            var gourl = `./settings.html?${tesla}`;
+            location.href = gourl;
+        }
+    </script>
+</body>
+</html>

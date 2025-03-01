@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+  <link href='./css/boxicons.min.css' rel='stylesheet'>
+  <link href='./css/quoicoubeh.css' rel='stylesheet'>
+  <style>
+    #title {
+      font-family: Librestile;
+    }
+    a{color:darkcyan}
+    html, body {
+      height: 100%;
+    }
+    body {   
+      opacity: 0;
+      transition: opacity .5s;   
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,50,1) 90%, rgba(0,0,0,1) 100%);
+      color: cornflowerblue;
+      font-family: Octarine;
+      overflow: hidden;
+    }
+    #content {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: center;
+    }
+    #newAlert {
+      width: 80vw;
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      color: white;
+      border-color: red;
+      border-style: solid;
+    }
+    #noNews {
+      display: flex;
+      align-items: center;
+    }
+    #down {
+      margin-top: auto;
+      margin-bottom: 8vh;
+    }
+    /* Ty chatgpt */
+    #footer {
+      font-size: clamp(12px, 5vw, 26px); /* Min 12px, Max 20px, Scales with viewport width */
+      white-space: nowrap;              /* Prevent wrapping */
+      overflow: hidden;                 /* Hide overflow if necessary */
+      text-overflow: ellipsis;          /* Add ellipsis if text is too long */
+    }
+    #f2 {
+      font-size: 48px;
+    }
+    #greetingText {
+      margin-bottom: 0;
+    }
+  </style>
+  <script src="./js/trans.js"></script>
+  <script src="./js/libdinde-locale.js"></script>
+</head>
+<body>
+  <div id="content">
+    <h1 id="greetingText">Hello Player</h1>
+    <h1><span id="welcomeText">Welcome to</span>&nbsp;<span id="title">DindeGDPS</span></h1>
+    <div id="newAlert">
+      <p id="noNews">
+        No news for now!
+      </p>
+    </div>
+    <div id="down">
+      <h4 id="altText">
+        [Alt Accounts? Hold CTRL while clicking PLAY]
+      </h4>
+      <div id="f2">
+        <a href="javascript:window.chrome.webview.postMessage('ext://dimisaio.be/discord')"><i class='bx bxl-discord-alt'></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://youtube.com/@dindegdps')"><i class='bx bxl-youtube' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://twitter.com/dimisaio')"><i class='bx bxl-twitter' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://dgdps.us.to/wa')"><i class='bx bxl-whatsapp' ></i></a>&nbsp;<a href="javascript:transitionToPage('more.html')"><i class='bx bx-folder-plus'></i></a>
+      </div>
+      <div id="footer">
+        <a href="https://gdps.dimisaio.be/">Tools</a> | <a href="https://browse.141412.xyz">GDBrowser</a> | <a href="javascript:transitionToPage('settings.html')">Settings</a> | <a href="javascript:transitionToPage('credits.html')">Credits</a>
+      </div>
+    </div>
+  </div>
+  <script src="./js/libdinde.js"></script>
+  <script>
+        var lol = new Date;
+        var hour = lol.getHours();
+        var greeting;
+        if(hour <= 11 && hour >= 6) {
+          greeting = phr.goodMorning;
+        } else if(hour >= 12 && hour <= 18) {
+          greeting = phr.goodAfternoon;
+        } else {
+          greeting = phr.goodEvening;
+        }
+        greetingText.innerText = greeting + ", " + navigator.userAgent.split("-")[2] + "!";             
+        noNews.innerText = phr.noNewsText;
+        welcomeText.innerText = phr.welcomeText;
+        altText.innerText = phr.altText;
+        footer.getElementsByTagName("a")[0].innerText = phr.toolsLink;
+        footer.getElementsByTagName("a")[2].innerText = phr.settingsLink;
+        footer.getElementsByTagName("a")[3].innerText = phr.creditsLink;
+        var lang = navigator.userAgent.split("-")[1];
+        /* 
+          Забирай меня скорей       🦃🦃        🦃🦃🦃  
+          Увози за сто морей       🦃 🦃       🦃   🦃 
+          И целуй меня везде          🦃        🦃   🦃 
+          Восемнадцать мне уже        🦃         🦃🦃🦃  (not yet)
+          Забирай меня скорей         🦃        🦃   🦃 
+          Увози за сто морей          🦃        🦃   🦃 
+          И целуй меня везде          🦃        🦃   🦃 
+          Восемнадцать мне уже      🦃🦃🦃      🦃🦃🦃  
+        */
+        switch(lang) {
+          case "bg":
+          case "ru":
+            break;
+          case "nl":
+            footer.style.fontSize = "clamp(14px, 5vw, 22px)";
+        }
+
+        // if(footer.innerText.length >= 50) footer.style.fontSize = (footer.innerText.length * 0.4) + "px";
+        // if(footer.innerText.length >= 60) footer.style.fontSize = (footer.innerText.length * 0.29) + "px";
+
+        fetch("https://dogcheck.dimisaio.be/news.php?language=" + navigator.userAgent.split("-")[1]).then((response) => response.text()).then(data => {
+          if(!data) return;
+          noNews.style.display = "none";
+          var news = document.createElement("p");
+          news.id = "gotNews";
+          newAlert.appendChild(news);
+          gotNews.innerText = data;
+        });
+  </script>
+</body>
+</html>

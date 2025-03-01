@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+<script src="./js/libdinde-locale.js"></script>
+<link rel="stylesheet" href="./css/quoicoubeh.css">
+<style>
+    #updates {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: Octarine;
+        font-size: 14px;
+        zoom: var(--base-zoom); /* Adjusts the zoom for all content */
+    }
+    input[type=checkbox] {
+        vertical-align: middle;
+        position: relative;
+        bottom: 1px;
+    }
+    a {
+        color: rgb(18, 177, 230);
+    }
+    body, html {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: Octarine;
+    }
+    body {
+        background-color: rgba(0,0,21,1);
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+    .left-div {
+        padding-top: 2%;
+        padding-left: 2.5%;
+        line-height: 1.8;
+        width: 20%;
+        /* background-color: rgb(17, 17, 17); /* Specify your desired background color */
+        background-color: #000005;
+
+    }
+    .right-div {
+        flex: 1;
+        padding-top: 4%;
+        padding-left: 2%;
+        background-color: #000015; /* Specify your desired background color */
+        zoom: var(--responsive-zoom); /* Adjusts the zoom for all content */
+    }
+    button, select, input, input::placeholder {
+        color: rgb(18, 177, 230);
+        background-color: black;
+    }
+</style>
+<script src="./js/trans.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-div">
+            <a href="javascript:void(0)" onclick="load('updates')" id="updatesCat">Updates</a><br>
+            <a href="javascript:void(0)" onclick="load('gdps')">GDPS</a><br>
+            <a href="javascript:void(0)" onclick="load('launcher')">Launcher</a>
+        </div>
+        <div class="right-div">
+            <div id="updates">
+                <input type="checkbox" id="cupdates" onclick="applyupdcheck()"><span id="autoUpdatesText">Automatically check for updates</span></input>
+                <br><br>
+                <span style="padding-left: 6px;" id="uchannelText">Update Channel:</span>
+                <select onchange="applyupdcheck()" name="Update Channel" id="uchannel" size="1">
+                    <option value="Stable">Release</option>
+                    <option value="Beta">Beta</option>
+                </select>
+            </div>
+
+            <div id="gdps">
+                <input type="text" placeholder="Direct Link" id="mlurl">&nbsp;<button onclick="music()">OK</button><br><br>
+                <a href="sfh.html" rel="noreferrer noopenner">Menuloops</a><br><br>
+                <a href="https://github.com/masckmaster2007/GDVCQI/releases/latest/download/Fix.exe" download><button id="missingDepText">Missing Dependencies?</button></a>&nbsp;<button onclick="cgdps()" id="customPSText">Custom GDPSes</button>&nbsp;&nbsp;<a href="https://gallery.dgdps.us.to/?client" id="galleryText">Gallery</a>            
+            </div>
+
+            <div id="launcher">
+                <input type="text" id="color" placeholder="Yellow, Blue, Green..."> <button onclick="quoicouSend('color://' + document.getElementById('color').value)">OK</button><br><br>
+                <span style="padding-left: 6px;">Language:</span>
+                <select onchange="language()" name="Language" id="lang" size="1">
+                    <option value="Default" id="defaultLangText">Default</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="ru">Русский</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="bg">Български</option>
+                </select><br><br>
+                <span style="padding-left: 6px;" id="UBLocationText">Menu bar position:</span>
+                <select onchange="setpos()" name="Menu bar position" id="mbpos" size="1">
+                    <option value="Center" id="UBCenter">Center</option>
+                    <option value="Left" id="UBLeft">Left</option>
+                    <option value="Right" id="UBRight">Right</option>
+                </select><br><br>
+                <button onclick="quoicouSend('GoSimple')" id="simpleModeText">Enable Simple Mode</button><br><br>
+                <button onclick="sreset()" id="resetSettingsText">Reset Settings</button><br><br>
+                <input type="checkbox" name="Close launcher" id="clauncher" onclick="applycloselauncher()"><span id="closeLauncherText">Close launcher after "Play"</span></input>
+            </div>
+        </div>
+    </div>
+    <script src="./js/libdinde.js"></script>
+    <script>
+        updatesCat.innerText = phr.updatesCat;
+        autoUpdatesText.innerText = phr.autoUpdatesText;
+        uchannelText.innerText = phr.updateChannelText;
+        uchannel.name = phr.updateChannelText;
+        missingDepText.innerText = phr.missingDepText;
+        customPSText.innerText = phr.customPSText;
+        galleryText.innerText = phr.galleryText;
+        mlurl.placeholder = phr.menuloopText;
+        defaultLangText.innerText = phr.defaultLangText;
+        simpleModeText.innerText = phr.simpleModeText;
+        resetSettingsText.innerText = phr.resetSettingsText;
+        closeLauncherText.innerText = phr.closeLauncherText;
+        UBLocationText.innerText = phr.UBLocationText;
+        UBLeft.innerText = phr.UBLeft;
+        UBCenter.innerText = phr.UBCenter;
+        UBRight.innerText = phr.UBRight;
+
+
+        var lang = navigator.userAgent.split("-")[1];
+
+        switch(lang) {
+        case "bg":
+        case "ru":
+            document.body.style.fontFamily = "ArialCyrillic";
+            updates.style.fontFamily = "ArialCyrillic";
+        }
+    </script>
+</body>
+</html>

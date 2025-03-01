@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More</title>
+    <link rel="stylesheet" href="./css/quoicoubeh.css">
+    <script src="./js/libdinde-locale.js"></script>
+    <style>
+        a {
+            color:darkcyan;
+            font-size: 22px;
+            line-height: 12vh;
+        }
+        body {      
+            background: rgba(0,0,40,1);
+            opacity: 0;
+            transition: opacity .5s;
+            color: cornflowerblue;
+            overflow: hidden;
+            margin: 10vh;
+        }
+        h1 {
+            font-size: 36px;
+        }
+    </style>
+    <script src="./js/trans.js"></script>
+</head>
+<body>
+    <center>
+        <h1 id="moreSocialsText">More socials</h1>
+        <a href="javascript:void(0)" onclick="window.chrome.webview.postMessage('ext://gdpshub.com/gdps/4')">GDPSHub</a><br>
+        <a href="javascript:void(0)" onclick="window.chrome.webview.postMessage('ext://v.douyin.com/ijMbpXbg/')">Douyin [抖音]</a><br>
+        <a href="javascript:void(0)" onclick="window.chrome.webview.postMessage('ext://t.me/dimisa1o')">Telegram</a><br>
+    </center>
+    <script src="./js/libdinde.js"></script>
+    <script>
+        moreSocialsText.innerText = phr.moreSocialsText;
+        window.chrome.webview.postMessage("SetColor");
+    </script>
+</body>
+</html>

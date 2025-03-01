@@ -7,6 +7,11 @@
     src: url("../fonts/Octarine-Light.otf");
 }
 
+@font-face {
+    font-family: ArialCyrillic;
+    src: url("../fonts/arialroundedmtprocyr_bold.otf");
+}
+
 a {
     transition: 0.3s ease;
 }
@@ -16,4 +21,22 @@ a:hover {
 
 body {
     font-family: Octarine;
+}
+
+:root {
+    /* Base font size calculated from screen dimensions */
+    --base-zoom: calc(80% + ((1vw + 1vh) / 2));
+    --responsive-zoom: clamp(90%, var(--base-zoom), 150%);
+}
+
+body {
+    font-size: var(--responsive-zoom);
+    zoom: var(--responsive-zoom); /* Adjusts the zoom for all content */
+}
+
+/* Optional: Limit zoom adjustments for very small screens */
+@media (max-width: 480px), (max-height: 320px) {
+    :root {
+        --responsive-zoom: clamp(85%, calc(100% + 0.5vw), 120%);
+    }
 }
