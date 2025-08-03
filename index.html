@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <head>
   <link href='./css/boxicons.min.css' rel='stylesheet'>
+  <link href='./css/boxicons-brands.min.css' rel='stylesheet'>
   <link href='./css/quoicoubeh.css' rel='stylesheet'>
   <style>
     #title {
@@ -76,10 +77,10 @@
         [Alt Accounts? Hold CTRL while clicking PLAY]
       </h4>
       <div id="f2">
-        <a href="javascript:window.chrome.webview.postMessage('ext://dimisaio.be/discord')"><i class='bx bxl-discord-alt'></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://youtube.com/@dindegdps')"><i class='bx bxl-youtube' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://twitter.com/dimisaio')"><i class='bx bxl-twitter' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://dgdps.us.to/wa')"><i class='bx bxl-whatsapp' ></i></a>&nbsp;<a href="javascript:transitionToPage('more.html')"><i class='bx bx-folder-plus'></i></a>
+        <a href="javascript:window.chrome.webview.postMessage('ext://discord.gg/sVcFBddjfj')"><i class='bx bxl-discord-alt'></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://youtube.com/@dindegdps')"><i class='bx bxl-youtube' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://twitter.com/dimisaio')"><i class='bx bxl-twitter' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://tiktok.com/@masckmaster')"><i class="bxl bx-tiktok"></i></a>&nbsp;<a href="javascript:transitionToPage('more.html')"><i class='bx bx-folder-plus'></i></a>
       </div>
       <div id="footer">
-        <a href="https://gdps.dimisaio.be/">Tools</a> | <a href="https://browse.141412.xyz">GDBrowser</a> | <a href="javascript:transitionToPage('settings.html')">Settings</a> | <a href="javascript:transitionToPage('credits.html')">Credits</a>
+        <a href="https://gdps.dimisaio.be/">Tools</a> | <a href="https://browse.141412.xyz">GDBrowser</a> | <a href="./list.html">GDPSs</a> | <a href="javascript:transitionToPage('settings.html')">Settings</a> | <a href="javascript:transitionToPage('credits.html')">Credits</a>
       </div>
     </div>
   </div>
@@ -100,8 +101,8 @@
         welcomeText.innerText = phr.welcomeText;
         altText.innerText = phr.altText;
         footer.getElementsByTagName("a")[0].innerText = phr.toolsLink;
-        footer.getElementsByTagName("a")[2].innerText = phr.settingsLink;
-        footer.getElementsByTagName("a")[3].innerText = phr.creditsLink;
+        footer.getElementsByTagName("a")[3].innerText = phr.settingsLink;
+        footer.getElementsByTagName("a")[4].innerText = phr.creditsLink;
         var lang = navigator.userAgent.split("-")[1];
         /* 
           Забирай меня скорей       🦃🦃        🦃🦃🦃  
@@ -132,6 +133,8 @@
           newAlert.appendChild(news);
           gotNews.innerText = data;
         });
+        var random = Math.floor(Math.random() * 10);
+        if(random == 8) quoicouSend("RefreshIsCool");
   </script>
 </body>
 </html>

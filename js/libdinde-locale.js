@@ -39,7 +39,9 @@ var en = {
     musicText: "🎵 Music 🎵",
     usedFontsText: "Fonts used in the launcher :",
     encouragementText: "Click PLAY and MARK a point in our history",
-    backText: "< Back"
+    backText: "< Back",
+    browseText: "Browse",
+    uninstallText: "Uninstall"
 }
 
 var fr = {
@@ -83,7 +85,9 @@ var fr = {
     musicText: "🎵 Musique 🎵",
     usedFontsText: "Polices d'écriture utilisées dans le launcher :",
     encouragementText: "Clique sur PLAY et MARQUE un point dans notre histoire",
-    backText: "< Retour"
+    backText: "< Retour",
+    browseText: "Naviguer",
+    uninstallText: "Désinstaller"
 }
 
 var ru = {
@@ -127,7 +131,9 @@ var ru = {
     musicText: "🎵 Музыка 🎵",
     usedFontsText: "Использованные шрифты:",
     encouragementText: "Нажмите PLAY и оставьте след в нашей истории",
-    backText: "< Назад"
+    backText: "< Назад",
+    browseText: "Открыть",
+    uninstallText: "Удалить"
 }
 
 var nl = {
@@ -171,7 +177,9 @@ var nl = {
     musicText: "🎵 Muziek 🎵",
     usedFontsText: "Gebruikte lettertypen in de launcher :",
     encouragementText: "Klik op PLAY om een punt in onze geschiedenis te markeren",
-    backText: "< Terug"
+    backText: "< Terug",
+    browseText: "Bladeren",
+    uninstallText: "Verwijderen"
 }
 
 var bg = {
@@ -215,5 +223,7 @@ var bg = {
     musicText: "🎵 Музика 🎵",
     usedFontsText: "Шрифтове, използвани в лаунчъра:",
     encouragementText: "Натисни PLAY и отбележи значителен момент в историята ни",
-    backText: "< Назад"
+    backText: "< Назад",
+    browseText: "Търсене",
+    uninstallText: "Деинсталирай"
 }

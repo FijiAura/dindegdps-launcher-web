@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+  <link href='./css/boxicons.min.css' rel='stylesheet'>
+  <link href='./css/quoicoubeh.css' rel='stylesheet'>
+  <style>
+    #title {
+      font-family: Librestile;
+    }
+    a{color:darkcyan}
+    html, body {
+      height: 100%;
+      margin-left: 2vw;
+    }
+    body {   
+      opacity: 0;
+      transition: opacity .5s;   
+      background: black;
+      color: cornflowerblue;
+      font-family: Octarine;
+    }
+    #gdpsBox {
+        border-style: solid;
+        border-radius: 5px;
+        border-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    #padding {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    h2 {
+        margin-top: 5%;
+    }
+    #mbot {
+        margin-right: 10px;
+    }
+    #kys {
+        display: flex;
+        flex-direction: row;
+    }
+  </style>
+  <script src="./js/trans.js"></script>
+  <script src="./js/libdinde-locale.js"></script>
+</head>
+<body>
+    <div id="kys">
+        <h1 id="title">GDPS List</h1>&nbsp;&nbsp;&nbsp;<h1><a href="https://gallery.dgdps.us.to" id="gallery">(Gallery)</a></h1>
+    </div>
+    <script src="./list.js"></script>
+    <script src="./js/libdinde.js"></script>
+    <script>
+
+        gallery.innerText = phr.galleryText;
+
+        function uninstall(gdps) {
+            quoicouSend("delete://" + gdps);
+        }
+
+        var gdpsList = gdpses.split("||");
+        gdpsList.forEach(element => {
+            // 1: Create Div
+            var x = document.createElement("div");
+            x.id = "gdpsBox";
+            // 2: Create and append image!
+            var y = document.createElement("img");
+            y.src = `../${element}/logo.png`;
+            y.height = "100";
+            y.width = "100";
+            x.append(y);
+
+            // 3: Create and append buttons?
+            var z = document.createElement("div");
+            z.id = "padding";
+
+            var title = document.createElement("h2");
+            title.innerHTML = element;
+
+            var a = document.createElement("a");
+            a.innerText = phr.browseText;
+            a.href = "javascript:quoicouSend('explorer://" + element + "')";
+            a.id = "mbot";
+
+            var b = document.createElement("a");
+            b.innerText = phr.uninstallText;
+            b.href = "javascript:uninstall('" + element + "')";
+            b.id = "mbot";
+
+            x.append(title);
+            z.append(a);
+            z.append(b);
+            x.append(z);
+
+            document.body.append(x);
+        });
+    </script>
+</body>
+</html>
