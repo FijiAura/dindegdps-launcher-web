@@ -1,1 +1,0 @@
-const gdpses = `acjagdps||gd19||gd20||gd21||gd22||Motion||PlusGDPS`
