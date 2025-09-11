@@ -1,1 +1,1 @@
-en/fr/nl/ru/bg
+en/fr/nl/ru/bg/es/el/tr/pt

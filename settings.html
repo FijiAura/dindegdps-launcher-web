@@ -58,6 +58,9 @@
         color: rgb(18, 177, 230);
         background-color: black;
     }
+    h1 {
+        margin: 0;
+    }
 </style>
 <script src="./js/trans.js"></script>
 </head>
@@ -80,12 +83,19 @@
             </div>
 
             <div id="gdps">
+                <hr>
+                <h1>🎵 Menuloop</h1>
+                <input id="tesla" type="file" accept="audio/mpeg"><br>
                 <input type="text" placeholder="Direct Link" id="mlurl">&nbsp;<button onclick="music()">OK</button><br><br>
-                <a href="sfh.html" rel="noreferrer noopenner">Menuloops</a><br><br>
+                <a href="sfh.html" rel="noreferrer noopenner">SongFileHub</a><br><br>
+                <hr>
+                <h1>⚙️ Other</h1>
                 <a href="https://github.com/masckmaster2007/GDVCQI/releases/latest/download/Fix.exe" download><button id="missingDepText">Missing Dependencies?</button></a>&nbsp;<button onclick="cgdps()" id="customPSText">Custom GDPSes</button>&nbsp;&nbsp;<a href="https://gallery.dgdps.us.to/?client" id="galleryText">Gallery</a>            
             </div>
 
             <div id="launcher">
+                <hr>
+                <h1>💻 UI</h1>
                 <input type="text" id="color" placeholder="Yellow, Blue, Green..."> <button onclick="quoicouSend('color://' + document.getElementById('color').value)">OK</button><br><br>
                 <span style="padding-left: 6px;">Language:</span>
                 <select onchange="language()" name="Language" id="lang" size="1">
@@ -95,6 +105,10 @@
                     <option value="ru">Русский</option>
                     <option value="nl">Nederlands</option>
                     <option value="bg">Български</option>
+                    <option value="el">Ελληνικά</option>
+                    <option value="es">Español</option>
+                    <option value="tr">Türk</option>
+                    <option value="pt">Português</option>
                 </select><br><br>
                 <span style="padding-left: 6px;" id="UBLocationText">Menu bar position:</span>
                 <select onchange="setpos()" name="Menu bar position" id="mbpos" size="1">
@@ -102,9 +116,11 @@
                     <option value="Left" id="UBLeft">Left</option>
                     <option value="Right" id="UBRight">Right</option>
                 </select><br><br>
+                <input type="checkbox" name="Close launcher" id="clauncher" onclick="applycloselauncher()"><span id="closeLauncherText">Close launcher after "Play"</span></input>
+                <hr>
+                <h1>⚠️ Danger</h1>
                 <button onclick="quoicouSend('GoSimple')" id="simpleModeText">Enable Simple Mode</button><br><br>
                 <button onclick="sreset()" id="resetSettingsText">Reset Settings</button><br><br>
-                <input type="checkbox" name="Close launcher" id="clauncher" onclick="applycloselauncher()"><span id="closeLauncherText">Close launcher after "Play"</span></input>
             </div>
         </div>
     </div>

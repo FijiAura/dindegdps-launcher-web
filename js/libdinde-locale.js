@@ -227,3 +227,195 @@ var bg = {
     browseText: "Търсене",
     uninstallText: "Деинсталирай"
 }
+    
+var el = {
+    // libdinde.js
+    srResetText:
+        'Θέλετε να επαναφέρετε τις ρυθμίσεις σας στις προεπιλεγμένες Αυτή η ενέργεια είναι ΑΜΕΤΑΚΛΗΤΗ. Ο DimisAIO δε θα λάβει καμία ευθύνη.',
+    cgdpsText:
+        'Ενεργοποιώντας αυτό, το πρωτόκολλο dgdps:// θα είναι ενεργοποιημένο. Ο DimisAIO δε θα αναλάβει καμία ευθύνη αν ενεργοποιήσετε αυτήν την επιλογή!\nΘέλετε να την ενεργοποιήσετε;',
+    destText: 'Επιλέξτε το GDPS προορισμού (gd19, gd20, gd21, gd22, …)',
+    copyExit: 'Επιλογή',
+    musicConfirm: 'Λήψη μουσικής;',
+    // index.html
+    goodMorning: 'Καλημέρα',
+    goodAfternoon: 'Καλησπέρα',
+    goodEvening: 'Καλό βράδυ',
+    toolsLink: 'Εργαλεία',
+    settingsLink: 'Ρυθμίσεις',
+    creditsLink: 'Ευχαριστίες',
+    welcomeText: 'Καλώς ήλθατε στο',
+    noNewsText: 'Δεν υπάρχουν νέα προς το παρόν!',
+    altText: '[Άλλους λογαριασμούς; Κρατήστε CTRL κάνοντας κλικ στο PLAY]',
+    // settings.html
+    updatesCat: 'Ενημερώσεις',
+    autoUpdatesText: 'Αυτόματος έλεγχος ενημερώσεων',
+    updateChannelText: 'Κανάλι Ενημέρωσης:',
+    missingDepText: 'Έλλειψη Εξαρτήσεων;',
+    customPSText: 'Άλλα GDPS',
+    galleryText: 'Συλλογή GDPS',
+    menuloopText: 'Σύνδεσμος MP3 (menuloop)',
+    defaultLangText: 'Προεπιλεγμένο',
+    simpleModeText: 'Ενεργοποίηση Απλής Λειτουργίας',
+    resetSettingsText: 'Επαναφορά Ρυθμίσεων',
+    closeLauncherText: 'Κλείσιμο του πρόγραμμά εκκίνησης μετά το "Play"',
+    UBLocationText: 'Θέση γραμμής μενού: ',
+    UBCenter: 'Κέντρο',
+    UBLeft: 'Αριστερά',
+    UBRight: 'Δεξιά',
+    // more.html
+    moreSocialsText: 'Περισσότερα κοινωνικά δίκτυα',
+    // credits.html
+    creditsText: 'Ευχαριστίες!',
+    playersText: 'Παίκτες :',
+    musicText: '🎵 Μουσική 🎵',
+    usedFontsText: 'Χρησιμοποιημένες γραμματοσειρές στο πρόγραμμα εκκίνησης:',
+    encouragementText: 'Κάντε κλικ στο κουμπί PLAY και ΣΗΜΕΙΩΣΤΕ ένα σημείο στην ιστορία μας',
+    backText: '< Πίσω',
+    browseText: 'Εξερεύνηση',
+    uninstallText: 'Απεγκατάσταση',
+};
+
+var es = {
+    // libdinde.js
+    srResetText:
+        '¿Está SEGURO de que desea restablecer la configuración a la predeterminada? Esta acción es IRREVERSIBLE, DimisAIO no se va a hacer responsable.',
+    cgdpsText:
+        'Al habilitar esta opción, se habilitará el protocolo dgdps://. DimisAIO no se va hacer responsable si la habilita.\n¿Desea habilitarla?',
+    destText: 'Elija el destino GDPS (gd19, gd20, gd21, gd22, ...)',
+    copyExit: 'Seleccionar',
+    musicConfirm: '¿Descargar la música?',
+    // index.html
+    goodMorning: 'Buenos días',
+    goodAfternoon: 'Buenas tardes',
+    goodEvening: 'Buenas noches',
+    toolsLink: 'Herramientas',
+    settingsLink: 'Ajustes',
+    creditsLink: 'Créditos',
+    welcomeText: 'Bienvenido a',
+    noNewsText: '¡Ninguna noticia por ahora!',
+    altText: '¿Cuentas alternativas? Mantén presionada la tecla CTRL mientras haces clic en PLAY',
+    // settings.html
+    updatesCat: 'Actualizaciones',
+    autoUpdatesText: 'Buscar actualizaciones automáticamente',
+    updateChannelText: 'Actualizar el canal:',
+    missingDepText: '¿Dependencias faltantes?',
+    customPSText: 'GDPS personalizados',
+    galleryText: 'Galería',
+    menuloopText: 'Enlace directo (bucle de menú)',
+    defaultLangText: 'Por defecto',
+    simpleModeText: 'Habilitar el modo simple',
+    resetSettingsText: 'Restablecer la configuración',
+    closeLauncherText: 'Cerrar lanzador después de jugar',
+    UBLocationText: 'Posición de la barra de menú: ',
+    UBCenter: 'Centro',
+    UBLeft: 'Izquierda',
+    UBRight: 'Derecha',
+    // more.html
+    moreSocialsText: 'Más redes sociales',
+    // credits.html
+    creditsText: '¡Créditos!',
+    playersText: 'Jugadores:',
+    musicText: '🎵 Música 🎵',
+    usedFontsText: 'Fuentes utilizadas en el lanzador:',
+    encouragementText: 'Haz clic en JUGAR y MARCA un punto en nuestra historia',
+    backText: '< Atrás',
+    browseText: 'Navegar',
+    uninstallText: 'Desinstalar',
+};
+
+var tr = {
+    // libdinde.js
+    srResetText:
+        'Ayarları varsayılana sıfırlamak istediğinizden emin misiniz?\nBu eylem geri ALINAMAZ\nDimisAIO olacak şeylerden sorumlu değildir.',
+    cgdpsText:
+        'Bunu etkinleştirdiğinizde, dgdps:// protokolü aktifleştirilecektir\nProtokolü etkinleştirdiğinizde DimisAIO hiçbir sorumluluk kabul etmeyecektir!\nEtkinleştirmek istediğinizden emin misiniz?',
+    destText: "Hedef GDPS'i seçin (gd19, gd20, gd21, gd22, ...)",
+    copyExit: 'Seç',
+    musicConfirm: 'Müziği indirmek ister misiniz?',
+    // index.html
+    goodMorning: 'Günaydın',
+    goodAfternoon: 'İyi akşamlar',
+    goodEvening: 'Tünaydın',
+    toolsLink: 'Araçlar',
+    settingsLink: 'Ayarlar',
+    creditsLink: 'Emeği geçenler',
+    welcomeText: "'e hoşgeldiniz",
+    noNewsText: 'Şu anlık bir haber yok!',
+    altText: "[Diğer hesaplarınız mı var? Oyna tuşuna basarken CTRL'ye basılı tutun]",
+    // settings.html
+    updatesCat: 'Güncellemeler',
+    autoUpdatesText: 'Otomatik olarak güncellemeler için kontrol et',
+    updateChannelText: 'Güncelleme kanalı:',
+    missingDepText: 'Kayıp bağlılıklar?',
+    customPSText: "Özel GDPS'ler",
+    galleryText: 'Galeri',
+    menuloopText: 'Direkt link (menuloop)',
+    defaultLangText: 'Varsayılan',
+    simpleModeText: 'Basit modu etkinleştir',
+    resetSettingsText: 'Ayarları sıfırla',
+    closeLauncherText: 'Oynaya bastıktan sonra başlatıcıyı kapat',
+    UBLocationText: 'Menü çubuğu konumu: ',
+    UBCenter: 'Merkez',
+    UBLeft: 'Sol',
+    UBRight: 'Sağ',
+    // more.html
+    moreSocialsText: 'Diğer sosyal ağlar',
+    // credits.html
+    creditsText: 'Emeği geçenler!',
+    playersText: 'Oyuncular :',
+    musicText: '🎵 Müzik 🎵',
+    usedFontsText: 'Başlatıcıda kullanılan yazı tipleri :',
+    encouragementText: 'Oynaya bas ve tarihimizde bir noktayı işaretle',
+    backText: '< Geri',
+    browseText: 'Göz at',
+    uninstallText: 'Kaldır',
+};
+
+var pt = {
+    // libdinde.js
+    srResetText:
+        'Você tem CERTEZA que quer redefinir suas configurações para o padrão? Esta ação é IRREVERSÍVEL\nDimisAIO não assumirá qualquer responsabilidade.',
+    cgdpsText:
+        'Ao habilitar isso, o protocolo dgdps:// vai ser ativado. DimisAIO não tomará responsabilidade se você ativar essa opção!\nQuer ativar?',
+    destText: 'Selecione o GDPS de destino (gd19, gd20, gd21, gd22, ..)',
+    copyExit: 'Selecione',
+    musicConfirm: 'Baixar a musica?',
+    // index.html
+    goodMorning: 'Bom dia',
+    goodAfternoon: 'Boa tarde',
+    goodEvening: 'Boa noite',
+    toolsLink: 'Ferramentas',
+    settingsLink: 'Configurações',
+    creditsLink: 'Créditos',
+    welcomeText: 'Bem-vindo ao',
+    noNewsText: 'Sem notícias por agora!',
+    altText: '[Contas alternativas? Segure CTRL enquanto aperta PLAY]',
+    // settings.html
+    updatesCat: 'Atualizações',
+    autoUpdatesText: 'Automaticamente procurar por atualizações',
+    updateChannelText: 'Canal de atualizações:',
+    missingDepText: 'Dependências ausentes?',
+    customPSText: 'GDPSes personalizados',
+    galleryText: 'Galeria',
+    menuloopText: 'Link Direto (menuloop)',
+    defaultLangText: 'Padrão',
+    simpleModeText: 'Ativar Modo Simples',
+    resetSettingsText: 'Redefinir Configurações',
+    closeLauncherText: 'Fechar launcher após "Play"',
+    UBLocationText: 'Posição da barra de menu: ',
+    UBCenter: 'Centro',
+    UBLeft: 'Esquerda',
+    UBRight: 'Direita',
+    // more.html
+    moreSocialsText: 'Mais sociais',
+    // credits.html
+    creditsText: 'Créditos!',
+    playersText: 'Jogadores :',
+    musicText: '🎵 Música 🎵',
+    usedFontsText: 'Fontes usadas no launcher :',
+    encouragementText: 'Clique em JOGAR e MARQUE um ponto em nossa história',
+    backText: '< Voltar',
+    browseText: 'Buscar',
+    uninstallText: 'Desinstalar',
+};

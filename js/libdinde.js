@@ -12,6 +12,9 @@ switch(lang) {
         document.body.style.fontFamily = "ArialCyrillic";
         if(typeof updates != "undefined") updates.style.fontFamily = "ArialCyrillic";
         if(typeof footer != "undefined") footer.style.fontSize = "120%";
+        break;
+    case "el":
+        document.body.style.fontFamily = "Arial";
 }
 
 function quoicouSend(lol) {
@@ -24,7 +27,11 @@ var languages = {
     fr: fr,
     ru: ru,
     nl: nl,
-    bg: bg
+    bg: bg,
+    el: el,
+    es: es,
+    tr: tr,
+    pt: pt,
 };
 
 // window.location.search is a deprecated POS
@@ -66,9 +73,12 @@ function load(page) {
 }
 
 function music(url = document.getElementById("mlurl").value) {
-    if(url == "" || !url.startsWith("https://")) return;
     var wokisme = prompt(phr.destText);
     if(!wokisme) return;
+    if(tesla.files[0]) {
+        return processFile(wokisme);
+    }
+    if(url == "" || !url.startsWith("https://")) return;
     url = url.replace("https://", "music://");
     url = url + "||" + wokisme;
     quoicouSend(url);
@@ -81,4 +91,12 @@ if(window.location.search) {
     var url = window.location.search.replace("?", "");
     history.pushState({}, null, location.href.split("&")[0]);
     if(confirm(phr.musicConfirm)) music(url);
+}
+    
+function processFile(gdps) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                chrome.webview.postMessage(reader.result + '||' + gdps);
+            };
+            reader.readAsDataURL(tesla.files[0]);
 }
